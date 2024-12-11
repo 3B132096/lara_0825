@@ -53,7 +53,13 @@ Route::get('/', function () {
         //'content' => 'updated content',
     //]);
 
-    $post->title = 'saved title';
-    $post->content = 'saved content';
-    $post->save();
+    //$post->title = 'saved title';
+    //$post->content = 'saved content';
+    //$post->save();
+
+    $post -> delete();
+
+    Post::destroy(2);
+
+    Post::destroy(3, 5, 7);
 });
